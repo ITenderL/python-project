@@ -53,6 +53,10 @@ urlpatterns = [
     path('book/preUpdate/<int:id>', helloWorld.views.preUpdate),
     path('book/update', helloWorld.views.update),
     path('book/delete/<int:id>', helloWorld.views.delete),
+    path('book/preAdd2', helloWorld.views.preAdd2),
+    path('book/preAdd3', helloWorld.views.preAdd3),
+
+
     # 命名空间namespace
     path('user/', include(('user.urls', 'user'), namespace='user')),
     path('order/', include(('order.urls', 'order'), namespace='order')),

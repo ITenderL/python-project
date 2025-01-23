@@ -7,7 +7,7 @@ from django.http import HttpResponse, StreamingHttpResponse, FileResponse
 from django.shortcuts import redirect, render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from helloWorld.forms import StudentForm
+from helloWorld.forms import StudentForm, BookInfoForm, BookInfoModelForm
 from helloWorld.models import StudentInfo, BookInfo, BookTypeInfo, AccountInfo
 
 
@@ -311,7 +311,8 @@ def add(request):
     book.bookName = request.POST.get("bookName")
     book.publishDate = request.POST.get("publishDate")
     book.price = request.POST.get("price")
-    book.bookType_id = request.POST.get("bookType_id")
+    # book.bookType_id = request.POST.get("bookType_id")
+    book.bookType_id = request.POST.get("bookType")
     book.save()
     # 数据添加之后，获取数据的主键id
     print(book.id)
@@ -369,7 +370,7 @@ def delete(request, id):
 @transaction.atomic
 def transfer2(request):
     """
-    模拟转账
+    模拟转账，django事务处理
     :param request:
     :return:
     """
@@ -384,3 +385,25 @@ def transfer2(request):
         print("执行失败，异常信息: ", e)
         transaction.savepoint_rollback(sid)
     return HttpResponse("OK")
+
+
+def preAdd2(request):
+    """
+    预处理，添加操作
+    :param request:
+    :return:
+    """
+    form = BookInfoForm()
+    context_value = {"title": "图书添加2", "form": form}
+    return render(request, 'book/add2.html', context_value)
+
+
+def preAdd3(request):
+    """
+    预处理，添加操作，使用modelForm表单
+    :param request:
+    :return:
+    """
+    form = BookInfoModelForm()
+    context_value = {"title": "图书添加3", "form": form}
+    return render(request, 'book/add2.html', context_value)

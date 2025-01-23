@@ -19,6 +19,9 @@ class BookTypeInfo(models.Model):
         db_table = 't_book_type'
         verbose_name = '图书类别信息'
 
+    def __str__(self):
+        return self.bookTypeName
+
 
 class BookInfo(models.Model):
     id = models.AutoField(primary_key=True)

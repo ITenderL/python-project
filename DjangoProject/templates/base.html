@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Python222学院
+        {% endblock %}
+    </title>
+</head>
+{# load不支持，要去掉 #}
+{#{% load static %}#}
+<body>
+<div id="head">
+    {# Django语法 #}
+    {# <img src="{% static 'logo.png' %}"/>#}
+    {# Jinja3语法 #}
+    <img src="{{ static('头像.jpg') }}"/>
+</div>
+<div id="content">
+    {% block content %}
+        欢迎进入Python222学院
+    {% endblock %}
+</div>
+<div id="footer">
+    版权所有 www.python222.com
+</div>
+</body>
+</html>

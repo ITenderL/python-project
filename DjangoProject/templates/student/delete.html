@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h3>{{ title }}</h3>
+<form method="post">
+    {% csrf_token %}
+    您确定更要删除 id:{{ student.id }} name:{{ student.name }} age:{{ student.age }} 的记录吗 ？
+    <input type="submit" value="确定">
+</form>
+</body>
+</html>

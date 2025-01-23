@@ -1,0 +1,12 @@
+*.pyc
+.pydevproject
+.project
+.idea
+.settings/
+debug
+node_modules
+log
+.settings
+*.iml
+venv
+tmp_file

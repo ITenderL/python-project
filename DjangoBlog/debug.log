@@ -1,0 +1,17 @@
+INFO 2025-01-23 16:28:00,189 autoreload Watching for file changes with StatReloader
+INFO 2025-01-23 16:47:49,697 autoreload Watching for file changes with StatReloader
+INFO 2025-01-23 16:48:06,064 basehttp "GET /test HTTP/1.1" 200 38
+INFO 2025-01-23 16:49:40,589 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-23 16:49:41,862 autoreload Watching for file changes with StatReloader
+INFO 2025-01-23 16:49:42,783 basehttp "GET /test HTTP/1.1" 200 186
+INFO 2025-01-23 16:55:42,094 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\DjangoBlog\settings.py changed, reloading.
+INFO 2025-01-23 16:55:43,170 autoreload Watching for file changes with StatReloader
+INFO 2025-01-23 16:58:09,053 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-23 16:58:10,033 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-23 16:58:17,462 log Not Found: /article/test
+WARNING 2025-01-23 16:58:17,463 basehttp "GET /article/test HTTP/1.1" 404 3061
+INFO 2025-01-23 17:01:04,145 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\DjangoBlog\urls.py changed, reloading.
+INFO 2025-01-23 17:01:05,186 autoreload Watching for file changes with StatReloader
+INFO 2025-01-23 17:01:10,338 basehttp "GET /article/test HTTP/1.1" 200 317
+INFO 2025-01-23 17:01:10,407 basehttp "GET /static/bootstrap5/js/bootstrap.js HTTP/1.1" 200 145819
+INFO 2025-01-23 17:01:10,409 basehttp "GET /static/bootstrap5/css/bootstrap.css HTTP/1.1" 200 267476

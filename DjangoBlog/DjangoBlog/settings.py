@@ -175,3 +175,6 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 配置自定义用户模型MyUser
+AUTH_USER_MODEL = 'user.MyUser'

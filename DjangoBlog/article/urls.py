@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import RedirectView
 
-from article.views import TestView
+from article.views import TestView, article
 
 urlpatterns = [
     path('test', TestView.as_view(), name='test'),
+    path('', RedirectView.as_view(url='user/login.html')),
+    # 文章列表
+    path('<int:id>/<int:page>/<int:typeId>.html', article, name="article"),
 ]

@@ -68,13 +68,15 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 此处添加新的全局上下文
+                'article.mycontext.getAllArticleType',
+                'link.mycontext.getAllLink'
             ],
         },
     },
 ]
 
 # settings.py
-
 LOGGING = {
     'version': 1,  # 日志配置的版本
     'disable_existing_loggers': False,  # 是否禁用现有的日志记录器

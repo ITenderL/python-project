@@ -374,3 +374,664 @@ TypeError: context must be a dict rather than builtin_function_or_method.
 ERROR 2025-01-24 10:32:46,714 basehttp "GET /article/2/1/0.html HTTP/1.1" 500 100448
 INFO 2025-01-24 10:34:19,415 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
 INFO 2025-01-24 10:34:20,371 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-24 10:34:23,990 log Internal Server Error: /article/2/1/0.html
+Traceback (most recent call last):
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py", line 32, in article
+    return render(request, 'article.html', locals())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'album' not found. 'album' is not a valid view function or pattern name.
+ERROR 2025-01-24 10:34:23,996 basehttp "GET /article/2/1/0.html HTTP/1.1" 500 158018
+INFO 2025-01-24 10:35:20,776 basehttp "GET /article/2/1/0.html HTTP/1.1" 200 4735
+INFO 2025-01-24 10:35:20,876 basehttp "GET /static/css/blog.css HTTP/1.1" 200 4100
+INFO 2025-01-24 10:35:20,876 basehttp "GET /static/images/list_icon.png HTTP/1.1" 200 114
+INFO 2025-01-24 10:35:20,877 basehttp "GET /static/images/logo.png HTTP/1.1" 200 24259
+INFO 2025-01-24 10:35:20,892 basehttp "GET /static/images/user_icon.png HTTP/1.1" 200 208
+INFO 2025-01-24 10:35:20,892 basehttp "GET /static/images/user.jpg HTTP/1.1" 200 669
+INFO 2025-01-24 10:35:20,896 basehttp "GET /static/images/byType_icon.png HTTP/1.1" 200 626
+INFO 2025-01-24 10:35:20,897 basehttp "GET /static/images/link_icon.png HTTP/1.1" 200 884
+INFO 2025-01-26 09:57:27,934 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 09:57:59,899 basehttp "GET /article/2/1/0.html HTTP/1.1" 200 4735
+INFO 2025-01-26 09:58:01,022 basehttp "GET /article/2/1/0.html HTTP/1.1" 200 4735
+INFO 2025-01-26 10:07:18,707 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 10:08:42,034 basehttp "POST /user/login HTTP/1.1" 302 0
+INFO 2025-01-26 10:08:42,057 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 4767
+WARNING 2025-01-26 10:08:42,092 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 10:08:42,093 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 10:08:50,796 basehttp "GET /static/bootstrap5/js/bootstrap.js.map HTTP/1.1" 200 306458
+INFO 2025-01-26 10:08:50,816 basehttp "GET /static/bootstrap5/css/bootstrap.css.map HTTP/1.1" 200 658460
+WARNING 2025-01-26 10:09:55,267 log Not Found: /article/1/1/media/avatar/222.jpg
+WARNING 2025-01-26 10:09:55,268 basehttp "GET /article/1/1/media/avatar/222.jpg HTTP/1.1" 404 3682
+WARNING 2025-01-26 10:10:09,425 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 10:10:09,426 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 10:11:24,172 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 4767
+WARNING 2025-01-26 10:11:24,207 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 10:11:24,207 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 10:15:38,695 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 4767
+WARNING 2025-01-26 10:15:38,732 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 10:15:38,732 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+WARNING 2025-01-26 10:49:23,171 log Not Found: /media/avatar/user.jpg
+WARNING 2025-01-26 10:49:23,172 basehttp "GET /media/avatar/user.jpg HTTP/1.1" 404 2989
+WARNING 2025-01-26 10:50:07,756 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 10:50:07,757 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 10:51:01,717 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\DjangoBlog\urls.py changed, reloading.
+INFO 2025-01-26 10:51:02,768 autoreload Watching for file changes with StatReloader
+WARNING 2025-01-26 10:51:15,876 log Not Found: /user/avatar/222.jpg
+WARNING 2025-01-26 10:51:15,878 basehttp "GET /user/avatar/222.jpg HTTP/1.1" 404 3901
+INFO 2025-01-26 10:53:07,666 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\models.py changed, reloading.
+INFO 2025-01-26 10:53:08,681 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:11:42,056 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\DjangoBlog\settings.py changed, reloading.
+INFO 2025-01-26 11:11:43,175 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:12:25,439 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\link\models.py changed, reloading.
+INFO 2025-01-26 11:12:26,407 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:17:01,416 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\link\models.py changed, reloading.
+INFO 2025-01-26 11:17:02,451 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:21:39,943 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\link\models.py changed, reloading.
+INFO 2025-01-26 11:21:41,008 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:24:47,637 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\DjangoBlog\settings.py changed, reloading.
+INFO 2025-01-26 11:24:48,647 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:25:56,281 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\models.py changed, reloading.
+INFO 2025-01-26 11:25:57,227 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:26:30,676 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\models.py changed, reloading.
+INFO 2025-01-26 11:26:31,758 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:27:18,731 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\models.py changed, reloading.
+INFO 2025-01-26 11:27:19,799 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:27:58,657 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\models.py changed, reloading.
+INFO 2025-01-26 11:27:59,672 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:34:44,051 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 11:34:46,403 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:34:59,583 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\urls.py changed, reloading.
+INFO 2025-01-26 11:35:00,538 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:36:18,086 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\urls.py changed, reloading.
+INFO 2025-01-26 11:36:19,080 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:37:03,537 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:37:18,943 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5538
+WARNING 2025-01-26 11:37:19,006 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:37:19,007 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:37:30,476 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5538
+WARNING 2025-01-26 11:37:30,508 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:37:30,509 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:37:31,585 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5538
+WARNING 2025-01-26 11:37:31,621 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:37:31,621 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:38:08,958 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5549
+WARNING 2025-01-26 11:38:08,983 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:38:08,983 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:38:10,672 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5549
+WARNING 2025-01-26 11:38:10,695 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:38:10,696 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:38:11,331 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5549
+WARNING 2025-01-26 11:38:11,357 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:38:11,357 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:38:11,618 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5549
+WARNING 2025-01-26 11:38:11,640 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:38:11,640 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:38:11,881 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5549
+WARNING 2025-01-26 11:38:11,902 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:38:11,903 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:38:57,329 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 11:38:57,353 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:38:57,354 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:38:58,447 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 11:38:58,474 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:38:58,475 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:39:29,308 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 11:39:34,123 basehttp "POST /user/login HTTP/1.1" 302 0
+INFO 2025-01-26 11:39:34,138 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 11:39:34,173 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:39:34,173 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:40:33,782 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:40:37,931 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 11:40:38,695 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 11:40:38,965 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 11:40:39,166 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 11:40:46,200 basehttp "POST /user/login HTTP/1.1" 302 0
+INFO 2025-01-26 11:40:46,225 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 11:40:46,267 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:40:46,268 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:42:39,708 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\urls.py changed, reloading.
+INFO 2025-01-26 11:42:40,759 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:43:08,191 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 11:43:12,810 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 11:43:12,838 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:43:12,838 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 11:43:20,324 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 11:43:27,375 basehttp "POST /user/login HTTP/1.1" 302 0
+INFO 2025-01-26 11:43:27,390 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 11:43:27,438 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 11:43:27,439 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 13:54:02,950 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\DjangoBlog\settings.py changed, reloading.
+INFO 2025-01-26 13:54:05,106 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 13:54:06,352 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 13:54:06,414 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 13:54:06,414 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:01:20,362 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 14:01:20,457 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:01:20,458 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:01:47,086 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\DjangoBlog\settings.py changed, reloading.
+INFO 2025-01-26 14:08:41,533 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:09:41,575 basehttp "GET /article/1/1/1.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 14:09:41,603 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:09:41,604 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:10:21,429 basehttp "GET /article/1/1/1.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 14:10:21,459 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:10:21,459 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:14:00,081 basehttp "GET /article/1/1/1.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 14:14:00,113 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:14:00,114 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:14:27,301 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 14:14:28,362 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:14:49,763 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 14:14:50,746 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:15:12,220 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 14:15:13,197 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:15:39,539 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 14:15:40,698 autoreload Watching for file changes with StatReloader
+ERROR 2025-01-26 14:16:24,427 log Internal Server Error: /article/1/1/1.html
+Traceback (most recent call last):
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py", line 54, in article
+    return render(request, 'article.html', locals())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' not found. 'detail' is not a valid view function or pattern name.
+ERROR 2025-01-26 14:16:24,451 basehttp "GET /article/1/1/1.html HTTP/1.1" 500 206078
+ERROR 2025-01-26 14:17:11,454 log Internal Server Error: /article/1/1/1.html
+Traceback (most recent call last):
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py", line 54, in article
+    return render(request, 'article.html', locals())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' not found. 'detail' is not a valid view function or pattern name.
+ERROR 2025-01-26 14:17:11,457 basehttp "GET /article/1/1/1.html HTTP/1.1" 500 206528
+ERROR 2025-01-26 14:18:46,123 log Internal Server Error: /article/1/1/1.html
+Traceback (most recent call last):
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py", line 54, in article
+    return render(request, 'article.html', locals())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Workspace\PycharmProjects\python-project\DjangoBlog\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'detail' not found. 'detail' is not a valid view function or pattern name.
+ERROR 2025-01-26 14:18:46,126 basehttp "GET /article/1/1/1.html HTTP/1.1" 500 206014
+INFO 2025-01-26 14:19:34,512 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 14:19:35,506 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:20:22,368 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\urls.py changed, reloading.
+INFO 2025-01-26 14:20:23,389 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:20:24,778 basehttp "GET /article/1/1/1.html HTTP/1.1" 200 9643
+WARNING 2025-01-26 14:20:24,824 log Not Found: /media/article/11.png
+WARNING 2025-01-26 14:20:24,836 log Not Found: /media/article/22.jpg
+WARNING 2025-01-26 14:20:24,837 basehttp "GET /media/article/11.png HTTP/1.1" 404 2986
+WARNING 2025-01-26 14:20:24,837 basehttp "GET /media/article/22.jpg HTTP/1.1" 404 2986
+WARNING 2025-01-26 14:20:24,851 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:20:24,851 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:20:28,995 basehttp "GET /article/1/2/1.html HTTP/1.1" 200 9557
+WARNING 2025-01-26 14:20:29,031 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:20:29,032 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:23:53,494 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\urls.py changed, reloading.
+INFO 2025-01-26 14:23:54,455 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:23:57,177 basehttp "GET /article/ HTTP/1.1" 302 0
+WARNING 2025-01-26 14:23:57,194 log Not Found: /article/user/login.html
+WARNING 2025-01-26 14:23:57,195 basehttp "GET /article/user/login.html HTTP/1.1" 404 4513
+WARNING 2025-01-26 14:24:04,065 log Not Found: /article/user/login.html
+WARNING 2025-01-26 14:24:04,066 basehttp "GET /article/user/login.html HTTP/1.1" 404 4513
+INFO 2025-01-26 14:24:10,432 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 14:24:18,485 basehttp "POST /user/login HTTP/1.1" 302 0
+INFO 2025-01-26 14:24:18,519 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 14:24:18,553 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:24:18,553 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:39:04,764 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 14:39:05,942 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:39:15,112 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 14:39:15,161 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:39:15,162 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:42:03,431 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+WARNING 2025-01-26 14:42:03,465 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:42:03,467 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:42:25,980 basehttp "GET /article/1/1/1.html HTTP/1.1" 200 9643
+WARNING 2025-01-26 14:42:26,122 log Not Found: /media/article/11.png
+WARNING 2025-01-26 14:42:26,146 log Not Found: /media/article/22.jpg
+WARNING 2025-01-26 14:42:26,146 basehttp "GET /media/article/11.png HTTP/1.1" 404 2986
+WARNING 2025-01-26 14:42:26,147 basehttp "GET /media/article/22.jpg HTTP/1.1" 404 2986
+WARNING 2025-01-26 14:42:26,244 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:42:26,245 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:44:28,910 basehttp - Broken pipe from ('127.0.0.1', 55136)
+INFO 2025-01-26 14:44:28,912 basehttp - Broken pipe from ('127.0.0.1', 55196)
+INFO 2025-01-26 14:44:28,913 basehttp - Broken pipe from ('127.0.0.1', 55202)
+INFO 2025-01-26 14:44:28,913 basehttp - Broken pipe from ('127.0.0.1', 55170)
+INFO 2025-01-26 14:44:28,916 basehttp - Broken pipe from ('127.0.0.1', 55199)
+INFO 2025-01-26 14:44:28,918 basehttp - Broken pipe from ('127.0.0.1', 58897)
+INFO 2025-01-26 14:44:28,921 basehttp "GET /article/1/2/1.html HTTP/1.1" 200 9557
+INFO 2025-01-26 14:44:28,922 basehttp - Broken pipe from ('127.0.0.1', 55165)
+INFO 2025-01-26 14:44:28,923 basehttp - Broken pipe from ('127.0.0.1', 57160)
+INFO 2025-01-26 14:44:28,923 basehttp - Broken pipe from ('127.0.0.1', 55188)
+INFO 2025-01-26 14:44:28,924 basehttp - Broken pipe from ('127.0.0.1', 55182)
+INFO 2025-01-26 14:44:28,924 basehttp - Broken pipe from ('127.0.0.1', 55123)
+INFO 2025-01-26 14:44:28,924 basehttp - Broken pipe from ('127.0.0.1', 55185)
+INFO 2025-01-26 14:44:28,926 basehttp - Broken pipe from ('127.0.0.1', 55128)
+INFO 2025-01-26 14:44:28,927 basehttp - Broken pipe from ('127.0.0.1', 55176)
+INFO 2025-01-26 14:44:28,927 basehttp - Broken pipe from ('127.0.0.1', 55193)
+WARNING 2025-01-26 14:44:28,950 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:44:28,951 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:44:31,166 basehttp "GET /article/1/3/1.html HTTP/1.1" 200 9390
+WARNING 2025-01-26 14:44:31,188 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:44:31,189 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:44:33,790 basehttp "GET /article/1/2/1.html HTTP/1.1" 200 9557
+WARNING 2025-01-26 14:44:33,815 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:44:33,816 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+INFO 2025-01-26 14:45:14,458 basehttp "GET /article/1/2/1.html HTTP/1.1" 200 9557
+WARNING 2025-01-26 14:45:14,493 log Not Found: /media/avatar/222.jpg
+WARNING 2025-01-26 14:45:14,494 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 404 2986
+WARNING 2025-01-26 14:46:05,597 log Not Found: /user/avatar/222.jpg
+WARNING 2025-01-26 14:46:05,598 basehttp "GET /user/avatar/222.jpg HTTP/1.1" 404 3901
+WARNING 2025-01-26 14:46:06,730 log Not Found: /user/avatar/222.jpg
+WARNING 2025-01-26 14:46:06,730 basehttp "GET /user/avatar/222.jpg HTTP/1.1" 404 3901
+WARNING 2025-01-26 14:46:07,273 log Not Found: /user/avatar/222.jpg
+WARNING 2025-01-26 14:46:07,274 basehttp "GET /user/avatar/222.jpg HTTP/1.1" 404 3901
+WARNING 2025-01-26 14:46:07,785 log Not Found: /user/avatar/222.jpg
+WARNING 2025-01-26 14:46:07,786 basehttp "GET /user/avatar/222.jpg HTTP/1.1" 404 3901
+WARNING 2025-01-26 14:46:08,001 log Not Found: /user/avatar/222.jpg
+WARNING 2025-01-26 14:46:08,003 basehttp "GET /user/avatar/222.jpg HTTP/1.1" 404 3901
+WARNING 2025-01-26 14:46:08,207 log Not Found: /user/avatar/222.jpg
+WARNING 2025-01-26 14:46:08,208 basehttp "GET /user/avatar/222.jpg HTTP/1.1" 404 3901
+WARNING 2025-01-26 14:46:08,406 log Not Found: /user/avatar/222.jpg
+WARNING 2025-01-26 14:46:08,407 basehttp "GET /user/avatar/222.jpg HTTP/1.1" 404 3901
+INFO 2025-01-26 14:46:45,928 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\DjangoBlog\urls.py changed, reloading.
+INFO 2025-01-26 14:46:47,047 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:47:09,418 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\urls.py changed, reloading.
+INFO 2025-01-26 14:47:10,484 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:47:29,125 basehttp "GET /article/1/2/1.html HTTP/1.1" 200 9557
+INFO 2025-01-26 14:47:29,187 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 200 51233
+INFO 2025-01-26 14:53:30,451 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 14:54:06,776 basehttp - Broken pipe from ('127.0.0.1', 59362)
+INFO 2025-01-26 14:54:06,776 basehttp - Broken pipe from ('127.0.0.1', 59363)
+INFO 2025-01-26 14:54:07,139 basehttp "POST /user/login HTTP/1.1" 302 0
+INFO 2025-01-26 14:54:07,156 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+INFO 2025-01-26 14:54:07,170 basehttp - Broken pipe from ('127.0.0.1', 59437)
+INFO 2025-01-26 14:54:07,214 basehttp - Broken pipe from ('127.0.0.1', 59367)
+INFO 2025-01-26 14:54:29,212 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 14:54:31,022 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 14:54:31,629 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 14:54:31,822 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 14:54:32,002 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 14:54:45,129 basehttp "POST /user/login HTTP/1.1" 302 0
+INFO 2025-01-26 14:55:08,320 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 5711
+INFO 2025-01-26 14:55:25,862 basehttp "GET /user/login.html HTTP/1.1" 200 4394
+INFO 2025-01-26 14:55:26,736 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 14:55:27,783 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 14:55:35,693 basehttp "POST /user/login HTTP/1.1" 302 0
+INFO 2025-01-26 14:55:42,567 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 10224
+INFO 2025-01-26 14:55:42,680 basehttp "GET /media/article/login-background.jpg HTTP/1.1" 200 208144
+INFO 2025-01-26 14:55:42,685 basehttp "GET /media/article/11.png HTTP/1.1" 200 463458
+INFO 2025-01-26 16:24:39,215 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 16:24:40,288 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 16:48:59,432 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 16:49:00,584 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 17:09:48,181 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 17:09:49,244 autoreload Watching for file changes with StatReloader
+INFO 2025-01-26 17:17:31,901 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\article\views.py changed, reloading.
+INFO 2025-01-26 17:17:34,101 autoreload Watching for file changes with StatReloader
+INFO 2025-02-07 10:20:23,807 autoreload Watching for file changes with StatReloader
+INFO 2025-02-07 10:20:44,666 basehttp "GET /article/1/1/1.html HTTP/1.1" 200 9643
+WARNING 2025-02-07 10:20:44,783 basehttp "GET /static/css/blog.css HTTP/1.1" 404 1963
+WARNING 2025-02-07 10:20:44,800 basehttp "GET /static/js/jquery-1.11.2.min.js HTTP/1.1" 404 1996
+WARNING 2025-02-07 10:20:44,800 basehttp "GET /static/images/logo.png HTTP/1.1" 404 1972
+WARNING 2025-02-07 10:20:45,052 basehttp "GET /static/images/link_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:20:45,135 basehttp "GET /static/images/list_icon.png HTTP/1.1" 404 1987
+INFO 2025-02-07 10:20:45,151 basehttp "GET /media/article/11.png HTTP/1.1" 304 0
+WARNING 2025-02-07 10:20:45,154 basehttp "GET /static/images/user_icon.png HTTP/1.1" 404 1987
+INFO 2025-02-07 10:20:45,180 basehttp "GET /media/avatar/222.jpg HTTP/1.1" 304 0
+WARNING 2025-02-07 10:20:45,182 basehttp "GET /static/images/byType_icon.png HTTP/1.1" 404 1993
+INFO 2025-02-07 10:20:45,232 basehttp "GET /media/article/22.jpg HTTP/1.1" 200 16005
+INFO 2025-02-07 10:20:49,253 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 10224
+WARNING 2025-02-07 10:20:49,336 basehttp "GET /static/images/logo.png HTTP/1.1" 404 1972
+WARNING 2025-02-07 10:20:49,337 basehttp "GET /static/css/blog.css HTTP/1.1" 404 1963
+WARNING 2025-02-07 10:20:49,338 basehttp "GET /static/images/list_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:20:49,612 basehttp "GET /static/js/jquery-1.11.2.min.js HTTP/1.1" 404 1996
+WARNING 2025-02-07 10:20:49,671 basehttp "GET /static/images/user_icon.png HTTP/1.1" 404 1987
+INFO 2025-02-07 10:20:49,673 basehttp "GET /media/article/login-background.jpg HTTP/1.1" 200 208144
+WARNING 2025-02-07 10:20:49,701 basehttp "GET /static/images/byType_icon.png HTTP/1.1" 404 1993
+WARNING 2025-02-07 10:20:49,958 basehttp "GET /static/images/link_icon.png HTTP/1.1" 404 1987
+INFO 2025-02-07 10:21:14,466 basehttp "GET /article/detail/1/15.html HTTP/1.1" 200 6717
+WARNING 2025-02-07 10:21:14,497 basehttp "GET /static/css/blog.css HTTP/1.1" 404 1963
+WARNING 2025-02-07 10:21:14,735 basehttp "GET /static/js/jquery-1.11.2.min.js HTTP/1.1" 404 1996
+WARNING 2025-02-07 10:21:14,827 basehttp "GET /static/images/link_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:21:14,828 basehttp "GET /static/images/logo.png HTTP/1.1" 404 1972
+WARNING 2025-02-07 10:21:15,090 log Not Found: /media/article_images/2024/12/18/login-background.jpg
+WARNING 2025-02-07 10:21:15,091 basehttp "GET /media/article_images/2024/12/18/login-background.jpg HTTP/1.1" 404 3529
+WARNING 2025-02-07 10:21:15,095 basehttp "GET /static/images/comment_icon.png HTTP/1.1" 404 1996
+WARNING 2025-02-07 10:21:15,102 basehttp "GET /static/images/blog_show_icon.png HTTP/1.1" 404 2002
+WARNING 2025-02-07 10:21:15,105 basehttp "GET /static/images/user_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:21:15,117 basehttp "GET /static/images/byType_icon.png HTTP/1.1" 404 1993
+WARNING 2025-02-07 10:21:19,681 basehttp "GET /static/images/list_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:21:19,965 basehttp "GET /static/images/user_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:21:48,824 log Not Found: /login
+WARNING 2025-02-07 10:21:48,824 basehttp "GET /login HTTP/1.1" 404 3305
+INFO 2025-02-07 10:22:00,499 basehttp "GET /article/1/1/1.html HTTP/1.1" 200 9643
+WARNING 2025-02-07 10:22:00,549 basehttp "GET /static/css/blog.css HTTP/1.1" 404 1963
+WARNING 2025-02-07 10:22:00,549 basehttp "GET /static/js/jquery-1.11.2.min.js HTTP/1.1" 404 1996
+WARNING 2025-02-07 10:22:00,861 basehttp "GET /static/images/user_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:00,862 basehttp "GET /static/images/link_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:00,891 basehttp "GET /static/images/byType_icon.png HTTP/1.1" 404 1993
+WARNING 2025-02-07 10:22:00,902 basehttp "GET /static/images/logo.png HTTP/1.1" 404 1972
+WARNING 2025-02-07 10:22:00,902 basehttp "GET /static/images/list_icon.png HTTP/1.1" 404 1987
+INFO 2025-02-07 10:22:03,291 basehttp "GET /article/1/1/1.html HTTP/1.1" 200 9643
+WARNING 2025-02-07 10:22:03,326 basehttp "GET /static/css/blog.css HTTP/1.1" 404 1963
+WARNING 2025-02-07 10:22:03,415 basehttp "GET /static/js/jquery-1.11.2.min.js HTTP/1.1" 404 1996
+WARNING 2025-02-07 10:22:03,521 basehttp "GET /static/images/logo.png HTTP/1.1" 404 1972
+WARNING 2025-02-07 10:22:03,653 basehttp "GET /static/images/list_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:03,653 basehttp "GET /static/images/user_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:03,765 basehttp "GET /static/images/byType_icon.png HTTP/1.1" 404 1993
+WARNING 2025-02-07 10:22:03,766 basehttp "GET /static/images/link_icon.png HTTP/1.1" 404 1987
+INFO 2025-02-07 10:22:06,453 basehttp "GET /article/1/1/3.html HTTP/1.1" 200 7047
+WARNING 2025-02-07 10:22:06,493 basehttp "GET /static/css/blog.css HTTP/1.1" 404 1963
+WARNING 2025-02-07 10:22:06,731 basehttp "GET /static/js/jquery-1.11.2.min.js HTTP/1.1" 404 1996
+WARNING 2025-02-07 10:22:06,799 basehttp "GET /static/images/byType_icon.png HTTP/1.1" 404 1993
+WARNING 2025-02-07 10:22:06,800 basehttp "GET /static/images/link_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:07,093 basehttp "GET /static/images/list_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:07,107 basehttp "GET /static/images/user_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:07,108 basehttp "GET /static/images/logo.png HTTP/1.1" 404 1972
+WARNING 2025-02-07 10:22:14,834 basehttp "GET /static/images/list_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:14,834 basehttp "GET /static/images/user_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:14,848 basehttp "GET /static/images/link_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:16,505 basehttp "GET /static/images/list_icon.png HTTP/1.1" 404 1987
+INFO 2025-02-07 10:22:23,276 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 10225
+WARNING 2025-02-07 10:22:23,313 basehttp "GET /static/css/blog.css HTTP/1.1" 404 1963
+WARNING 2025-02-07 10:22:23,562 basehttp "GET /static/js/jquery-1.11.2.min.js HTTP/1.1" 404 1996
+WARNING 2025-02-07 10:22:23,631 basehttp "GET /static/images/logo.png HTTP/1.1" 404 1972
+WARNING 2025-02-07 10:22:23,632 basehttp "GET /static/images/list_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:23,916 basehttp "GET /static/images/byType_icon.png HTTP/1.1" 404 1993
+WARNING 2025-02-07 10:22:23,916 basehttp "GET /static/images/user_icon.png HTTP/1.1" 404 1987
+WARNING 2025-02-07 10:22:23,916 basehttp "GET /static/images/link_icon.png HTTP/1.1" 404 1987
+INFO 2025-02-07 10:25:33,742 autoreload D:\Workspace\PycharmProjects\python-project\DjangoBlog\DjangoBlog\settings.py changed, reloading.
+INFO 2025-02-07 10:25:34,742 autoreload Watching for file changes with StatReloader
+INFO 2025-02-07 10:25:38,139 autoreload Watching for file changes with StatReloader
+INFO 2025-02-07 10:25:49,083 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 10225
+INFO 2025-02-07 10:25:49,154 basehttp "GET /static/images/list_icon.png HTTP/1.1" 200 114
+INFO 2025-02-07 10:25:49,154 basehttp "GET /static/images/logo.png HTTP/1.1" 200 24259
+INFO 2025-02-07 10:25:49,154 basehttp "GET /static/css/blog.css HTTP/1.1" 200 4100
+INFO 2025-02-07 10:25:49,154 basehttp "GET /static/images/user_icon.png HTTP/1.1" 200 208
+INFO 2025-02-07 10:25:49,154 basehttp "GET /static/js/jquery-1.11.2.min.js HTTP/1.1" 200 95931
+INFO 2025-02-07 10:25:49,169 basehttp "GET /static/images/byType_icon.png HTTP/1.1" 200 626
+INFO 2025-02-07 10:25:49,169 basehttp "GET /static/images/link_icon.png HTTP/1.1" 200 884
+INFO 2025-02-07 16:44:27,578 autoreload Watching for file changes with StatReloader
+INFO 2025-02-07 16:44:40,642 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 10225
+INFO 2025-02-07 16:44:43,617 basehttp "GET /article/1/1/0.html HTTP/1.1" 200 10225
+INFO 2025-02-07 16:44:46,203 basehttp "GET /article/detail/1/15.html HTTP/1.1" 200 8158
+INFO 2025-02-07 16:44:46,292 basehttp "GET /static/images/publish_comment_icon.png HTTP/1.1" 200 887
+INFO 2025-02-07 16:44:46,294 basehttp "GET /static/images/blog_show_icon.png HTTP/1.1" 200 170
+WARNING 2025-02-07 16:44:46,300 log Not Found: /media/article_images/2024/12/18/login-background.jpg
+INFO 2025-02-07 16:44:46,300 basehttp "GET /static/images/comment_icon.png HTTP/1.1" 200 1127
+WARNING 2025-02-07 16:44:46,300 basehttp "GET /media/article_images/2024/12/18/login-background.jpg HTTP/1.1" 404 3529
+INFO 2025-02-07 16:44:56,121 basehttp "GET /article/detail/1/1.html HTTP/1.1" 200 10993
+INFO 2025-02-07 16:45:20,109 basehttp "POST /article/detail/1/1.html HTTP/1.1" 302 0
+INFO 2025-02-07 16:45:20,143 basehttp "GET /article/detail/1/1.html HTTP/1.1" 200 11282
+INFO 2025-02-07 16:45:27,542 basehttp "GET /article/detail/1/1.html HTTP/1.1" 200 11282
+INFO 2025-02-07 16:45:30,825 basehttp "GET /article/detail/1/1.html HTTP/1.1" 200 11282
+INFO 2025-02-07 16:45:45,673 basehttp "GET /article/detail/1/15.html HTTP/1.1" 200 8158
+WARNING 2025-02-07 16:45:45,699 log Not Found: /media/article_images/2024/12/18/login-background.jpg
+WARNING 2025-02-07 16:45:45,700 basehttp "GET /media/article_images/2024/12/18/login-background.jpg HTTP/1.1" 404 3529
+INFO 2025-02-07 16:46:22,013 basehttp "GET /article/detail/1/15.html HTTP/1.1" 200 8158
+WARNING 2025-02-07 16:46:22,046 log Not Found: /media/article_images/2024/12/18/login-background.jpg
+WARNING 2025-02-07 16:46:22,047 basehttp "GET /media/article_images/2024/12/18/login-background.jpg HTTP/1.1" 404 3529
+WARNING 2025-02-07 16:46:36,560 log Not Found: /media/article_images/2024/12/18/login-background.jpg
+WARNING 2025-02-07 16:46:36,560 basehttp "GET /media/article_images/2024/12/18/login-background.jpg HTTP/1.1" 404 3529
+INFO 2025-02-07 16:50:17,182 basehttp "GET /article/detail/1/15.html HTTP/1.1" 200 8158
+WARNING 2025-02-07 16:50:17,222 log Not Found: /media/article_images/2024/12/18/login-background.jpg
+WARNING 2025-02-07 16:50:17,222 basehttp "GET /media/article_images/2024/12/18/login-background.jpg HTTP/1.1" 404 3529
+INFO 2025-02-07 16:57:59,261 autoreload Watching for file changes with StatReloader
+INFO 2025-02-07 16:57:59,597 basehttp "GET /article/detail/1/15.html HTTP/1.1" 200 8140
+INFO 2025-02-07 16:58:14,524 basehttp "GET /article/1/1/1.html HTTP/1.1" 200 9643

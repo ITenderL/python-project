@@ -10,3 +10,4 @@ log
 *.iml
 venv
 tmp_file
+*.log
